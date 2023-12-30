@@ -11,5 +11,9 @@ class LikesTest(unittest.TestCase):
         names = ["p"]
         self.assertEqual(likes(names), "p likes this")
 
+    def test_2_ppl_like_this(self):
+        names = ["p", "o"]
+        self.assertEqual(likes(names), 'p and o like this')
+
 if __name__ == '__main__':
     unittest.main()
