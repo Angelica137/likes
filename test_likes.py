@@ -19,6 +19,14 @@ class LikesTest(unittest.TestCase):
         names = ["p", "o", "o"]
         self.assertEqual(likes(names), 'p, o and o like this')
 
+    def test_more_thatn_5_like_this(self):
+        names = ["1", "2", "2", "3", "4"]
+        self.assertEqual(likes(names), '1, 2 and 3 others like this')
+
+    def test_more_that_10_like_this(self):
+        names = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+        self.assertEqual(likes(names), '1, 2 and 8 others like this')
+
 
 if __name__ == '__main__':
     unittest.main()
