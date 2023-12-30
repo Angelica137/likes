@@ -1,2 +1,3 @@
 def likes(names: list) -> str:
-    pass
+    if not names:
+        return ('no one likes this')
